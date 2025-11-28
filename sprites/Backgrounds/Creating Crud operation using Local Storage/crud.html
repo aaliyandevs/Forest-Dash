@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Making Crud operation using local storage</title>
+  <link rel="stylesheet" href="./crud.css">
+</head>
+
+<body onload="readAll()">
+  <div class="contact-container">
+    <h2>Contact Us</h2>
+    <p>Feel free to reach out to us. We'd love to hear from you!</p>
+
+    <form id="contact-form" action="#" method="POST" style="display: none;">
+      <div class="input-group"> 
+        <input type="text" id="name" name="name" required placeholder="Name">
+        <input type="email" id="email" name="email" required placeholder="E-mail">
+        <button type="submit" class="btn" id="toggle-btn">Create</button>
+      </div>
+    </form>
+    <!-- Add this message div -->
+    <div id="message" style="display:none; margin-top:10px; color: green; font-weight:bold;"></div>
+
+    <div class="add_div">
+      <button onclick="create()" type="button" class="btn" id="toggle-btn">Add</button>
+    </div>
+
+    <div class="contact-list">
+      <h2>Contact Data</h2> <!-- New heading for data -->
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody class="data_table">
+          <!-- Dynamic rows will be added here -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="./crud.js"></script>
+</body>
+
+<!-- <body onload="readAll()">
+  <div class="contact-container">
+    <h2>Contact Us</h2>
+    <p>Feel free to reach out to us. We'd love to hear from you!</p>
+
+    <form id="contact-form" action="#" method="POST" style="display: none;">
+      <div class="input-group">
+        <input type="text" id="name" name="name" required placeholder="Name">
+        <input type="email" id="email" name="email" placeholder="E - mail" required>
+        <button onclick="add()" type="button" class="btn" id="toggle-btn">Create</button>
+      </div>
+    </form>
+    <div class="add_div">
+      <button onclick="create()" type="button" class="btn" id="toggle-btn">Add</button>
+    </div>
+    <div class="contact-list">
+      <h3>Contact List</h3>
+      <table>
+        <thead>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Action</th>
+        </thead>
+        <tbody class="data_table">
+        </tbody>
+        
+      </table>
+
+    </div>
+  </div>
+  <script src="./crud.js"></script>
+</body> -->
+
+</html>
+<!-- <tr>
+          <td>ali</td>
+          <td>ali@gmail.com</td>
+          <td class="Aright"><button type="button" class="">Edit</button></td>
+          <td><button type="button" class="">Delete</button></td>
+        </tr> -->
+<!-- <button onclick="create()" type="button" class="btn" id="toggle-btn">submit</button> -->
